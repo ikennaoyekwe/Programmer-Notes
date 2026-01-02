@@ -1,6 +1,24 @@
-# pacman -Qe
+## Pacman Install
 
-> see all foreign Packages that are Installed ( You have Installed )
+> if `pacman -S somePackage` didn't work
+>
+> do : `pacman -S somePackage --overwrite '*'`
+>
+> ### to see all your installed packages use :
+>
+> __pacman -Qe__
+
+## xh
+
+> better alternative for `curl` , installed with `winget install ducaale.xh`
+
+## bat
+
+> better than `cat`
+
+## lsd
+
+> better than `ls`
 
 ## ag
 
@@ -31,17 +49,23 @@
 > dust -n 5 ( show the 5 number of most heavy files )
 > ```
 
-## fzf
+## tree
 
-> fuzzy finder , use to sort your search by files better
+> use to see the tree structure of your folder .
 >
 > ```
-> example :
-> ag "arash" | fzf
+> tree -L 2  ( show only 2 level depth )
+> tree -L 2 -I 'node_modules|.git|dist'   ( -I exclude folder )
+> tree -L 2 -h  ( shows file size too )
 > ```
 
-- K , J ( to move Up & Down )
-- Enter ( to return result )
+## jq
+
+> use for parsing json files
+>
+> ```
+> jq . package.json
+> ```
 
 ## hx
 
@@ -50,3 +74,15 @@
 ## micro
 
 > micro editor , use CTRL + Q to exit, ctrl + S ( to save ) and etc ( just like windows )
+
+## fzf
+
+> fuzzy finder , use to sort your search by files better
+>
+> ```
+> example :
+> ag "arash" | fzf
+> ```
+>
+> - K , J ( to move Up & Down )
+> - Enter ( to return result )
